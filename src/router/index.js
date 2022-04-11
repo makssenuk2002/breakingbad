@@ -1,23 +1,46 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import FirstSeason from "@/components/seasons/FirstSeason";
+import SecondSeason from "@/components/seasons/SecondSeason";
+import ThirdSeason from "@/components/seasons/ThirdSeason";
+import FourthSeason from "@/components/seasons/FourthSeason";
+import Characters from "@/components/Characters";
+import Main from "@/components/Main";
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/Main',
+    name: 'Main',
+    component: Main
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/FirstSeason',
+    name: 'FirstSeason',
+    component: FirstSeason
+  },
+  {
+    path: '/SecondSeason',
+    name: 'SecondSeason',
+    component: SecondSeason
+  },
+  {
+    path: '/ThirdSeason',
+    name: 'ThirdSeason',
+    component: ThirdSeason
+  },
+  {
+    path: '/FourthSeason',
+    name: 'FourthSeason',
+    component: FourthSeason
+  },
+  {
+    path: '/Characters',
+    name: 'Characters',
+    component: Characters
+  },
+
 ]
 
 const router = new VueRouter({
